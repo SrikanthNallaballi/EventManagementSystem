@@ -48,7 +48,7 @@ public class Organizer {
     @Column(nullable = false,length = 50)
     private String password;
 
-    @Column(nullable = false,length = 12)
+    @Column(nullable = false,length = 15)
     private String phoneNumber;
 
     @Column(columnDefinition = "TEXT")
@@ -71,6 +71,5 @@ public class Organizer {
 
     @OneToMany(mappedBy = "organizer",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Event> events=new ArrayList<>();
-
 
 }
